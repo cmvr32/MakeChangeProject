@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class MakeChange {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 
 		double amount = 0;
@@ -73,7 +72,7 @@ public class MakeChange {
 		}
 
 	quarters = (withoutOnes / .25);
-//	change -= quarters * 0.25;
+
 	double withoutQuarters = withoutOnes - ((int) quarters * .25);
 	double dimes;
 
@@ -85,18 +84,18 @@ public class MakeChange {
 	dimes = (withoutQuarters / .10);
 	double withoutDimes = withoutQuarters - ((int) dimes * .10) + .005;
 	double nickles;
-	//System.out.println(withoutDimes);
+
 		if (withoutDimes < .10 && withoutDimes >= .05) {			
 			nickles = (withoutDimes / .05);
-			//if (nickles != 0) {
+			
 			System.out.println((int)nickles + " nickle(s)");
-		//}
+	
 		}
 		
 	nickles = (withoutDimes / .05); 
 	double withoutNickles = withoutDimes - ((int) nickles * .05);
 	double pennies;
-	//System.out.println(withoutNickles);
+	
 		if (withoutNickles < .05 && withoutNickles >= .01) {
 			pennies = (withoutNickles / .01);
 			System.out.println((int)pennies + " pennies");
